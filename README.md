@@ -1,6 +1,6 @@
-# Indo Explorers
+# Drift Indo
 
-Premium landing page for **Indo Explorers** — Indonesia's first mobile scuba diving and adventure expedition company.
+Premium landing page for **Drift Indo** — Indonesia's first mobile adventure expedition company.
 
 ## Tech Stack
 
@@ -20,9 +20,9 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Enquiry API
+## Waitlist API
 
-Submissions are stored locally in `data/enquiries.json` via `POST /api/enquiry`.
+Submissions are stored locally in `data/waitlist.json` via `POST /api/waitlist`.
 
 ## Deploy
 

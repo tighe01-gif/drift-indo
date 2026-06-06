@@ -1,13 +1,11 @@
 "use client";
 
 import {
-  BookOpen,
+  Truck,
   Users,
   MapPin,
-  ClipboardCheck,
   Compass,
   UserCheck,
-  Star,
   Globe,
 } from "lucide-react";
 import { Reveal } from "@/components/animations/reveal";
@@ -15,72 +13,62 @@ import { AnimatedCounter } from "@/components/animations/animated-counter";
 
 const features = [
   {
-    icon: BookOpen,
-    title: "Dive Beyond The Guidebooks",
-    description: "Access remote sites that don't appear on any tourist map.",
+    icon: Truck,
+    title: "Mobile Expeditions",
+    description: "Travel by custom expedition vehicle — the journey is part of the adventure.",
   },
   {
     icon: Users,
-    title: "Small Group Adventures",
-    description: "Intimate expeditions where every explorer matters.",
+    title: "Small Groups",
+    description: "Maximum 8 explorers. Intimate, personal, unforgettable.",
   },
   {
     icon: MapPin,
-    title: "Authentic Indonesia",
-    description: "Real villages, real culture, real connections.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Fully Organised",
-    description: "Transport, gear, guides — everything handled.",
+    title: "Off The Beaten Path",
+    description: "Routes and destinations most travellers never reach.",
   },
   {
     icon: Compass,
     title: "Built For Adventurers",
-    description: "Designed by explorers, for explorers.",
+    description: "Designed by explorers who know Indonesia inside out.",
   },
   {
     icon: UserCheck,
-    title: "Maximum 8 Guests",
-    description: "Exclusive groups. Personal attention guaranteed.",
-  },
-  {
-    icon: Star,
-    title: "Premium Experience",
-    description: "Quality equipment, expert guides, curated routes.",
+    title: "Fully Organised",
+    description: "Transport, routes, guides — you simply arrive and explore.",
   },
   {
     icon: Globe,
-    title: "Real Exploration",
-    description: "Go where tourists never venture.",
+    title: "Real Indonesia",
+    description: "Culture, wilderness, islands and experiences beyond the guidebook.",
   },
 ];
 
 export function WhyChooseUsSection() {
   return (
-    <section className="section-padding bg-ocean/30 relative">
+    <section id="why-us" className="section-padding bg-ocean/20 relative">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-20 max-w-2xl mx-auto">
             <p className="text-sunset text-sm tracking-[0.3em] uppercase mb-4">
-              Why Choose Us
+              Why Travel With Us
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-off-white">
-              Built Different
+              Adventure, Not Tourism
             </h2>
           </div>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {features.map((feature, i) => (
             <Reveal key={feature.title} delay={i * 0.08}>
-              <div className="group p-6 rounded-sm card-glass hover:border-sunset/30 transition-all duration-500 h-full">
+              <div className="group p-8 rounded-sm border border-border/50 hover:border-sunset/30 transition-all duration-500 h-full">
                 <feature.icon
-                  className="text-sunset mb-4 group-hover:scale-110 transition-transform duration-300"
-                  size={32}
+                  className="text-sunset mb-5 group-hover:scale-110 transition-transform duration-300"
+                  size={28}
                   strokeWidth={1.5}
                 />
-                <h3 className="font-display text-lg font-semibold text-off-white mb-2">
+                <h3 className="font-display text-xl font-semibold text-off-white mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-off-white/60 text-sm leading-relaxed">
@@ -92,18 +80,18 @@ export function WhyChooseUsSection() {
         </div>
 
         <Reveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
-              { value: 17000, suffix: "+", label: "Islands to Explore" },
-              { value: 8, suffix: "", label: "Max Group Size" },
-              { value: 100, suffix: "+", label: "Dive Sites" },
+              { value: 17000, suffix: "+", label: "Islands" },
+              { value: 8, suffix: "", label: "Max Explorers" },
+              { value: 100, suffix: "+", label: "Hidden Routes" },
               { value: 10, suffix: " Days", label: "Per Expedition" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-display text-4xl md:text-5xl font-bold text-sunset">
                   <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </p>
-                <p className="mt-2 text-sm tracking-widest uppercase text-muted">
+                <p className="mt-3 text-xs tracking-[0.25em] uppercase text-muted">
                   {stat.label}
                 </p>
               </div>

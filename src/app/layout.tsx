@@ -15,40 +15,38 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Indo Explorers | Indonesia's First Mobile Scuba Diving & Adventure Expedition Company",
+  title: "DRIFT INDO | Indonesia Adventure Expeditions",
   description:
-    "Join a small group expedition and travel across Indonesia discovering hidden dive sites, remote beaches, volcanoes, waterfalls and unforgettable adventures. Travel by expedition vehicle. Dive incredible locations. Camp under the stars.",
+    "Explore Indonesia beyond the guidebook. Small-group adventure expeditions combining island hopping, exploration, camping and world-class diving.",
   keywords: [
-    "Indonesia expedition",
-    "scuba diving Indonesia",
-    "adventure travel",
-    "mobile diving",
-    "island hopping",
-    "Komodo",
-    "Raja Ampat",
-    "expedition travel",
+    "Indonesia Adventure Tours",
+    "Indonesia Expeditions",
+    "Adventure Travel Indonesia",
+    "Indonesia Van Life",
+    "Scuba Adventure Indonesia",
+    "Island Hopping Indonesia",
   ],
   openGraph: {
-    title: "Indo Explorers | Discover The Real Indonesia",
+    title: "DRIFT INDO | Discover The Real Indonesia",
     description:
-      "Indonesia's first mobile scuba diving and adventure expedition company. Explore Further.",
+      "Explore Indonesia beyond the guidebook. Small-group adventure expeditions. Explore Further.",
     type: "website",
     locale: "en_US",
-    siteName: "Indo Explorers",
+    siteName: "Drift Indo",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Indo Explorers | Discover The Real Indonesia",
+    title: "DRIFT INDO | Indonesia Adventure Expeditions",
     description:
-      "Join a small group expedition across Indonesia. Scuba diving. Adventure. Exploration.",
+      "Travel across Indonesia by expedition vehicle. Adventure. Exploration. Freedom.",
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
+    icon: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 

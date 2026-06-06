@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface LogoProps {
   className?: string;
@@ -7,121 +8,69 @@ interface LogoProps {
   size?: "sm" | "md" | "lg";
 }
 
+function LogoMarkSvg({
+  size,
+  variant,
+}: {
+  size: number;
+  variant: "dark" | "light";
+}) {
+  const textColor = variant === "dark" ? "#f5f0e8" : "#0a1628";
+  const accentColor = "#e8742a";
+  const oceanColor = "#1a3a5c";
+
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <circle cx="32" cy="32" r="28" stroke={accentColor} strokeWidth="1.2" fill="none" opacity="0.65" />
+      <path d="M32 5 L33.5 12 L32 10.5 L30.5 12 Z" fill={accentColor} />
+      <path d="M32 59 L33.5 52 L32 53.5 L30.5 52 Z" fill={textColor} opacity="0.4" />
+      <path d="M5 32 L12 33.5 L10.5 32 L12 30.5 Z" fill={textColor} opacity="0.4" />
+      <path d="M59 32 L52 33.5 L53.5 32 L52 30.5 Z" fill={textColor} opacity="0.4" />
+      <path d="M12 40 L20 24 L26 31 L32 21 L38 33 L44 27 L52 40 Z" fill={textColor} opacity="0.95" />
+      <path d="M20 24 L26 31 L32 21 Z" fill={accentColor} opacity="0.75" />
+      <path d="M8 44 Q16 40 24 44 T40 44 T56 44 L56 50 Q48 46 40 50 T24 50 T8 50 Z" fill={oceanColor} />
+      <path d="M10 46 Q18 42 26 46 T42 46 T54 46" stroke={accentColor} strokeWidth="0.8" fill="none" opacity="0.55" />
+      <circle cx="32" cy="36" r="2.5" fill={accentColor} />
+      <path d="M32 36 L32 27" stroke={accentColor} strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function Logo({
   className,
   variant = "dark",
   showTagline = false,
   size = "md",
 }: LogoProps) {
-  const textColor = variant === "dark" ? "#f5f0e8" : "#0a1628";
-  const accentColor = "#e8742a";
-  const oceanColor = variant === "dark" ? "#1a3a5c" : "#1a3a5c";
+  const textColor = variant === "dark" ? "text-off-white" : "text-navy";
 
   const sizes = {
-    sm: { icon: 32, text: "text-sm", tagline: "text-[10px]" },
-    md: { icon: 44, text: "text-lg", tagline: "text-xs" },
-    lg: { icon: 56, text: "text-2xl", tagline: "text-sm" },
+    sm: { icon: 36, drift: "text-[11px]", indo: "text-[11px]", tagline: "text-[8px]", gap: "gap-2.5" },
+    md: { icon: 44, drift: "text-sm", indo: "text-sm", tagline: "text-[10px]", gap: "gap-3" },
+    lg: { icon: 56, drift: "text-xl", indo: "text-xl", tagline: "text-xs", gap: "gap-4" },
   };
 
   const s = sizes[size];
 
   return (
-    <div className={cn("flex items-center gap-3", className)}>
-      <svg
-        width={s.icon}
-        height={s.icon}
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        {/* Compass outer ring */}
-        <circle
-          cx="32"
-          cy="32"
-          r="30"
-          stroke={accentColor}
-          strokeWidth="1.5"
-          fill="none"
-          opacity="0.6"
-        />
-        {/* Compass cardinal points */}
-        <path
-          d="M32 4 L34 12 L32 10 L30 12 Z"
-          fill={accentColor}
-        />
-        <path
-          d="M32 60 L34 52 L32 54 L30 52 Z"
-          fill={textColor}
-          opacity="0.5"
-        />
-        <path
-          d="M4 32 L12 34 L10 32 L12 30 Z"
-          fill={textColor}
-          opacity="0.5"
-        />
-        <path
-          d="M60 32 L52 34 L54 32 L52 30 Z"
-          fill={textColor}
-          opacity="0.5"
-        />
-        {/* Mountain */}
-        <path
-          d="M12 42 L22 24 L28 32 L32 22 L40 34 L48 28 L52 42 Z"
-          fill={textColor}
-          opacity="0.9"
-        />
-        <path
-          d="M22 24 L28 32 L32 22 Z"
-          fill={accentColor}
-          opacity="0.7"
-        />
-        {/* Ocean wave */}
-        <path
-          d="M8 46 Q16 42 24 46 T40 46 T56 46 L56 52 Q48 48 40 52 T24 52 T8 52 Z"
-          fill={oceanColor}
-        />
-        <path
-          d="M10 48 Q18 44 26 48 T42 48 T54 48"
-          stroke={accentColor}
-          strokeWidth="1"
-          fill="none"
-          opacity="0.6"
-        />
-        {/* Compass needle center */}
-        <circle cx="32" cy="36" r="3" fill={accentColor} />
-        <path
-          d="M32 36 L32 26"
-          stroke={accentColor}
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <path
-          d="M32 36 L38 40"
-          stroke={textColor}
-          strokeWidth="1"
-          strokeLinecap="round"
-          opacity="0.6"
-        />
-      </svg>
-      <div className="flex flex-col">
-        <span
-          className={cn(
-            "font-display font-bold tracking-[0.2em] leading-none",
-            s.text
-          )}
-          style={{ color: textColor }}
-        >
-          INDO EXPLORERS
+    <div className={cn("flex items-center", s.gap, className)}>
+      <LogoMarkSvg size={s.icon} variant={variant} />
+      <div className="flex flex-col leading-none">
+        <span className={cn("font-display font-bold tracking-[0.35em]", s.drift, textColor)}>
+          DRIFT
+        </span>
+        <span className={cn("font-display font-bold tracking-[0.35em] mt-0.5", s.indo, textColor)}>
+          INDO
         </span>
         {showTagline && (
-          <span
-            className={cn(
-              "tracking-[0.25em] uppercase mt-1 opacity-70",
-              s.tagline
-            )}
-            style={{ color: accentColor }}
-          >
+          <span className={cn("tracking-[0.25em] uppercase mt-1.5 text-sunset opacity-80", s.tagline)}>
             Explore Further.
           </span>
         )}
@@ -132,22 +81,32 @@ export function Logo({
 
 export function LogoMark({ className, size = 64 }: { className?: string; size?: number }) {
   return (
-    <svg
-      className={className}
+    <Image
+      src="/icon.svg"
+      alt="Drift Indo"
       width={size}
       height={size}
-      viewBox="0 0 64 64"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="Indo Explorers logo"
-    >
-      <circle cx="32" cy="32" r="30" stroke="#e8742a" strokeWidth="1.5" fill="#0a1628" />
-      <path d="M12 42 L22 24 L28 32 L32 22 L40 34 L48 28 L52 42 Z" fill="#f5f0e8" />
-      <path d="M22 24 L28 32 L32 22 Z" fill="#e8742a" opacity="0.7" />
-      <path d="M8 46 Q16 42 24 46 T40 46 T56 46 L56 52 Q48 48 40 52 T24 52 T8 52 Z" fill="#1a3a5c" />
-      <circle cx="32" cy="36" r="3" fill="#e8742a" />
-      <path d="M32 36 L32 26" stroke="#e8742a" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M32 4 L34 12 L32 10 L30 12 Z" fill="#e8742a" />
-    </svg>
+      className={className}
+    />
+  );
+}
+
+export function LogoHorizontal({
+  className,
+  variant = "dark",
+}: {
+  className?: string;
+  variant?: "dark" | "light";
+}) {
+  const src = variant === "dark" ? "/logo-dark.svg" : "/logo-light.svg";
+  return (
+    <Image
+      src={src}
+      alt="Drift Indo — Explore Further."
+      width={220}
+      height={64}
+      className={cn("h-auto w-auto", className)}
+      priority
+    />
   );
 }

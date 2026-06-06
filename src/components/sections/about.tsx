@@ -2,50 +2,46 @@
 
 import Image from "next/image";
 import { Reveal } from "@/components/animations/reveal";
-import { CompassDecoration } from "@/components/animations/compass-decoration";
 
 export function AboutSection() {
   return (
     <section id="about" className="section-padding relative overflow-hidden bg-navy">
-      <CompassDecoration className="absolute -right-20 top-20" size={300} />
-
       <div className="mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <Reveal direction="left">
             <div className="relative aspect-[4/5] rounded-sm overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80"
-                alt="Adventure van camp overlooking the ocean at sunset"
+                alt="Expedition van camp overlooking the ocean at sunset"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/50 to-transparent" />
             </div>
           </Reveal>
 
           <Reveal direction="right" delay={0.2}>
-            <div>
-              <p className="text-sunset text-sm tracking-[0.3em] uppercase mb-4">
-                What Is Indo Explorers
+            <div className="lg:py-8">
+              <p className="text-sunset text-sm tracking-[0.3em] uppercase mb-6">
+                What Is Drift Indo
               </p>
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-off-white leading-tight">
-                Travel Further.
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-off-white leading-[1.05]">
+                We Move.
                 <br />
-                <span className="gradient-text">Dive Deeper.</span>
+                <span className="gradient-text">We Explore.</span>
               </h2>
-              <div className="mt-8 space-y-6 text-off-white/70 text-lg leading-relaxed">
+              <div className="mt-10 space-y-6 text-off-white/70 text-lg leading-relaxed max-w-lg">
                 <p>
-                  Indo Explorers is Indonesia&apos;s first mobile scuba diving and
-                  adventure expedition company.
+                  Drift Indo is Indonesia&apos;s first mobile adventure expedition company.
                 </p>
                 <p>
-                  Instead of staying in one destination, our small groups travel
-                  together across multiple islands and regions combining diving,
-                  adventure travel, camping, local culture and outdoor experiences
-                  into one incredible journey.
+                  Our small groups travel together across some of the most incredible
+                  destinations in Indonesia. Using expedition vehicles, local ferries and
+                  carefully planned routes, we combine adventure travel, diving, camping,
+                  culture and exploration into one unforgettable journey.
                 </p>
-                <p className="font-display text-2xl text-off-white italic">
+                <p className="font-display text-2xl text-off-white italic pt-2">
                   You simply arrive. We take care of the rest.
                 </p>
               </div>

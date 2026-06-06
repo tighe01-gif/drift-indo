@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Expeditions", href: "#expeditions" },
-  { label: "Enquire", href: "#enquire" },
+  { label: "Highlights", href: "#highlights" },
+  { label: "Routes", href: "#expeditions" },
+  { label: "Waitlist", href: "#waitlist" },
 ];
 
 export function Header() {
@@ -34,7 +34,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-12">
-        <a href="#" aria-label="Indo Explorers home">
+        <a href="#" aria-label="Drift Indo home">
           <Logo size="sm" />
         </a>
 
@@ -52,7 +52,7 @@ export function Header() {
 
         <div className="hidden md:block">
           <Button asChild size="sm">
-            <a href="#enquire">Enquire Now</a>
+            <a href="#waitlist">Join Waitlist</a>
           </Button>
         </div>
 
@@ -86,8 +86,8 @@ export function Header() {
               </a>
             ))}
             <Button asChild className="mt-2">
-              <a href="#enquire" onClick={() => setMobileOpen(false)}>
-                Enquire Now
+              <a href="#waitlist" onClick={() => setMobileOpen(false)}>
+                Join Waitlist
               </a>
             </Button>
           </div>

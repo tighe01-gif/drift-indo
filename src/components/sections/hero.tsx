@@ -11,69 +11,59 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
-          alt="Expedition vehicles driving through Indonesian coastal mountain roads"
+          src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80"
+          alt="Expedition vehicle on a coastal mountain road in Indonesia"
           fill
           priority
           className="object-cover scale-105"
           sizes="100vw"
         />
         <div className="absolute inset-0 cinematic-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-transparent to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/30 to-navy/50" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 md:px-12 text-center pt-20">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 md:px-12 text-center pt-24 pb-32">
         <Reveal delay={0.2}>
-          <p className="text-sunset text-sm md:text-base tracking-[0.35em] uppercase mb-6">
-            Indonesia&apos;s First Mobile Scuba Diving &amp; Adventure Expedition Company
+          <p className="text-sunset text-xs md:text-sm tracking-[0.35em] uppercase mb-8">
+            Adventure On The Move
           </p>
         </Reveal>
 
         <Reveal delay={0.4}>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] gradient-text">
+          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-[0.95] gradient-text">
             DISCOVER THE REAL INDONESIA
           </h1>
         </Reveal>
 
         <Reveal delay={0.6}>
-          <p className="mt-6 text-xl md:text-2xl text-off-white/80 font-light tracking-wide">
-            Scuba Diving. Adventure. Exploration.
+          <p className="mt-8 text-xl md:text-2xl text-off-white/85 font-light tracking-wide">
+            Adventure. Exploration. Freedom.
           </p>
         </Reveal>
 
         <Reveal delay={0.8}>
-          <div className="mt-8 max-w-2xl mx-auto space-y-4 text-off-white/70 text-base md:text-lg leading-relaxed">
+          <div className="mt-10 max-w-xl mx-auto space-y-6 text-off-white/70 text-base md:text-lg leading-relaxed">
             <p>
-              Forget crowded tourist resorts. Join a small group expedition and travel
-              across Indonesia discovering hidden dive sites, remote beaches, volcanoes,
-              waterfalls, island villages and unforgettable adventures.
+              Travel across Indonesia by expedition vehicle. Discover hidden islands,
+              remote beaches, volcanoes, waterfalls, world-class diving and unforgettable
+              experiences.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm md:text-base text-left max-w-lg mx-auto mt-6">
-              {[
-                "Travel by expedition vehicle.",
-                "Dive incredible locations.",
-                "Camp under the stars.",
-                "Meet fellow explorers.",
-              ].map((item) => (
-                <p key={item} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sunset shrink-0" />
-                  {item}
-                </p>
-              ))}
-            </div>
-            <p className="font-display text-xl md:text-2xl text-off-white mt-6 italic">
+            <p className="text-off-white/90 tracking-wide">
+              Small groups. Epic routes. Real adventure.
+            </p>
+            <p className="font-display text-xl md:text-2xl text-off-white italic pt-2">
               This is not a holiday. This is an expedition.
             </p>
           </div>
         </Reveal>
 
         <Reveal delay={1.0}>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg">
-              <a href="#enquire">Enquire Now</a>
+              <a href="#waitlist">Join The Waitlist</a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="#enquire">Join Waitlist</a>
+              <a href="#waitlist">Enquire Now</a>
             </Button>
           </div>
         </Reveal>

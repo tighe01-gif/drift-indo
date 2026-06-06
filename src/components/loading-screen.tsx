@@ -28,11 +28,24 @@ export function LoadingScreen() {
           >
             <LogoMark size={80} />
           </motion.div>
-          <motion.p
-            className="mt-6 text-sm tracking-[0.4em] uppercase text-sunset"
+          <motion.div
+            className="mt-5 text-center"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
+          >
+            <p className="font-display font-bold tracking-[0.35em] text-off-white text-sm">
+              DRIFT
+            </p>
+            <p className="font-display font-bold tracking-[0.35em] text-off-white text-sm mt-0.5">
+              INDO
+            </p>
+          </motion.div>
+          <motion.p
+            className="mt-4 text-xs tracking-[0.35em] uppercase text-sunset"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
           >
             Explore Further.
           </motion.p>
@@ -40,13 +53,13 @@ export function LoadingScreen() {
             className="mt-8 h-px w-32 bg-sunset/30 overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.7 }}
           >
             <motion.div
               className="h-full bg-sunset"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
-              transition={{ delay: 0.8, duration: 1.2, ease: "easeInOut" }}
+              transition={{ delay: 0.9, duration: 1.2, ease: "easeInOut" }}
             />
           </motion.div>
         </motion.div>
