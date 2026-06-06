@@ -2,6 +2,8 @@
 
 Premium landing page for **Drift Indo** — Indonesia's first mobile adventure expedition company.
 
+**Live:** [https://indo-explorers.vercel.app](https://indo-explorers.vercel.app)
+
 ## Tech Stack
 
 - Next.js 16 (App Router)
